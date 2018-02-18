@@ -1,0 +1,24 @@
+{
+  "name": "forexmm-react-native",
+  "description": "Burma Currency Exchange Rate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Aung Myo Kyaw",
+  "githubUrl": "",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "exp start --lan",
+    "build:android": "exp build:android",
+    "build:ios": "exp build:ios"
+  },
+  "dependencies": {
+    "expo": "^25.0.0",
+    "forexmm": "^2.1.0",
+    "react": "^16.2.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-native-elements": "^0.19.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
+}
