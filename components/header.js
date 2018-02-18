@@ -1,19 +1,29 @@
 import React, {Component} from 'react';
-import {StyleSheet} from 'react-native';
-import {Header as NE_Header} from 'react-native-elements';
+import {StyleSheet, Text, View} from 'react-native';
 
 class Header extends Component {
   render() {
     const {header} = this.props;
-    return <NE_Header centerComponent={{text: header, style: styles.header}} />;
+    return (
+      <View style={styles.headerWrapper}>
+        <Text style={styles.header}>{header}</Text>
+      </View>
+    );
   }
 }
 
 const styles = StyleSheet.create({
+  headerWrapper: {
+    height: 60,
+    flexDirection: 'column',
+    backgroundColor: '#009688',
+    justifyContent: 'space-around'
+  },
   header: {
+    fontSize: 26,
     color: 'white',
-    fontSize: 22,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
 });
 

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import {View, StyleSheet} from 'react-native';
+import {Constants} from 'expo';
+import {connect} from 'react-redux';
 import Header from '../components/header.js';
 import Table from '../components/table.js';
-import {connect} from 'react-redux';
-import {View, StyleSheet} from 'react-native';
 import {getExchangeRates} from '../actions';
-import {Card} from 'react-native-elements';
 
 class App extends Component {
   componentDidMount() {
@@ -15,6 +15,7 @@ class App extends Component {
     const {exchangeRates, header} = this.props;
     return (
       <View style={styles.container}>
+        <View style={styles.statusBar} />
         <Header header={header} />
         <Table rates={exchangeRates} />
       </View>
@@ -24,7 +25,12 @@ class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+		alignItems:'stretch'
+  },
+  statusBar: {
+    backgroundColor: '#009688',
+    height: Constants.statusBarHeight
   }
 });
 const mapStateToProps = state => {

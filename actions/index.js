@@ -1,4 +1,3 @@
-// const {latest} = require('forexmm');
 //action types
 export const REQ_STARTED = 'REQ_STARTED';
 export const REQ_SUCCEED = 'REQ_SUCCEED';
