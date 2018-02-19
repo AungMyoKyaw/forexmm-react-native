@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Text, ActivityIndicator} from 'react-native';
+import {View, StyleSheet, Text, ActivityIndicator, Button} from 'react-native';
 import {Constants} from 'expo';
 import {connect} from 'react-redux';
 import Header from '../components/header.js';
@@ -12,8 +12,32 @@ class App extends Component {
     dispatch(getExchangeRates());
   }
 
+  onClickButton() {
+    const {dispatch} = this.props;
+    dispatch(getExchangeRates());
+  }
+
   render() {
-    const {exchangeRates, header, loading} = this.props;
+    const {exchangeRates, header, loading, error} = this.props;
+    if (error) {
+      return (
+        <View style={styles.container}>
+          <View style={styles.statusBar} />
+          <Header header={header} />
+          <View style={styles.center}>
+            <Text style={styles.errorText}>
+              FAILED TO GET CURRENCY EXCHANGE RATES
+            </Text>
+            <Button
+              onPress={this.onClickButton.bind(this)}
+              title="Try Again!"
+              color="#009688"
+            />
+          </View>
+        </View>
+      );
+    }
+
     return (
       <View style={styles.container}>
         <View style={styles.statusBar} />
@@ -43,15 +67,20 @@ const styles = StyleSheet.create({
   statusBar: {
     backgroundColor: '#009688',
     height: Constants.statusBarHeight
+  },
+  errorText: {
+    color: 'red',
+    marginBottom: 40
   }
 });
 
 const mapStateToProps = state => {
-  const {exchangeRates, header, isFetching} = state;
+  const {exchangeRates, header, isFetching, error} = state;
   return {
     header,
     exchangeRates,
-    loading: isFetching
+    loading: isFetching,
+    error
   };
 };
 

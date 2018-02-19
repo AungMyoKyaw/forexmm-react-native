@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './reducers';
 import thunk from 'redux-thunk';
 import App from './containers/app.js';
-import {StyleSheet, Text, View} from 'react-native';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 

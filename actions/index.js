@@ -45,8 +45,7 @@ export const getExchangeRates = () => (dispatch, getState) => {
       })
       .catch(err => {
         dispatch({
-          type: REQ_SUCCEED,
-          exchangeRates: []
+          type: REQ_FAILED
         });
       });
   }
@@ -60,4 +59,3 @@ const shouldFetch = prevState => {
     return true;
   }
 };
-
