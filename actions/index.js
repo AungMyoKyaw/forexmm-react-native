@@ -26,10 +26,11 @@ export const getExchangeRates = () => (dispatch, getState) => {
       .then(data => {
         Object.keys(latest.rates).forEach((key, i) => {
           resData.push({
-            id: i,
-            currencyName: currencies[key],
+            id: ++i,
+            country: currencies[key],
             currency: key,
-            value: latest.rates[key]
+            value: key == 'JPY' ? 100 : 1,
+            rate: latest.rates[key]
           });
         });
         dispatch({
@@ -46,8 +47,6 @@ export const getExchangeRates = () => (dispatch, getState) => {
       });
   }
 };
-
-const fetchRates = () => {};
 
 const shouldFetch = prevState => {
   const {isFetching} = prevState;

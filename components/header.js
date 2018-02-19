@@ -14,10 +14,10 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
   headerWrapper: {
-    height: 60,
+    height: 53,
     flexDirection: 'column',
     backgroundColor: '#009688',
-    justifyContent: 'space-around'
+    justifyContent: 'center'
   },
   header: {
     fontSize: 26,
