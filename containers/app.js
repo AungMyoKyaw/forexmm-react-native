@@ -49,7 +49,8 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: '#fff'
   },
   center: {
     flex: 1,
