@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   header: {
-    fontSize: 26,
+    fontSize: 20,
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center'
