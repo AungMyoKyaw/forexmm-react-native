@@ -3,6 +3,7 @@ import {View, StyleSheet, Text, ActivityIndicator, Button} from 'react-native';
 import {Constants} from 'expo';
 import {connect} from 'react-redux';
 import Header from '../components/header.js';
+import ErrorMessage from '../components/error.js';
 import Table from '../components/table.js';
 import {getExchangeRates} from '../actions';
 
@@ -24,16 +25,7 @@ class App extends Component {
         <View style={styles.container}>
           <View style={styles.statusBar} />
           <Header header={header} />
-          <View style={styles.center}>
-            <Text style={styles.errorText}>
-              FAILED TO GET CURRENCY EXCHANGE RATES
-            </Text>
-            <Button
-              onPress={this.onClickButton.bind(this)}
-              title="Try Again!"
-              color="#009688"
-            />
-          </View>
+          <ErrorMessage onClickButton={this.onClickButton.bind(this)} />
         </View>
       );
     }
