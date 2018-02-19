@@ -6,6 +6,10 @@ export const REQ_FAILED = 'REQ_FAILED';
 //actions
 export const getExchangeRates = () => (dispatch, getState) => {
   if (shouldFetch(getState())) {
+    dispatch({
+      type: REQ_STARTED
+    });
+
     let resData = [];
     let latest, currencies;
     return fetch('http://forex.cbm.gov.mm/api/latest')
