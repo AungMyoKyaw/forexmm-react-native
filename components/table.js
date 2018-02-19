@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {FlatList, Text, StyleSheet, View} from 'react-native';
+import Flag from 'react-native-flags';
 
 const extractKey = ({id}) => id;
 
@@ -7,6 +8,9 @@ class Table extends Component {
   renderItem = ({item}) => {
     return (
       <View style={item.id % 2 == 0 ? styles.row : [styles.row, styles.dark]}>
+        <View style={styles.flag}>
+          <Flag code={item.countryCode} size={32} />
+        </View>
         <Text style={styles.country}>{item.country}</Text>
         <Text style={styles.value}>{item.value}</Text>
         <Text style={styles.currency}>{item.currency}</Text>
@@ -42,9 +46,13 @@ const styles = StyleSheet.create({
   dark: {
     backgroundColor: '#E8E8E8'
   },
+  flag: {
+    flex: 0.15,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   country: {
-    flex: 0.5,
-    paddingLeft: 40
+    flex: 0.35
   },
   value: {
     flex: 0.1

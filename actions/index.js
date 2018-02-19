@@ -34,7 +34,8 @@ export const getExchangeRates = () => (dispatch, getState) => {
             country: currencies[key],
             currency: key,
             value: key == 'JPY' ? 100 : 1,
-            rate: latest.rates[key]
+            rate: latest.rates[key],
+            countryCode: key.slice(0, 2)
           });
         });
         dispatch({
@@ -43,7 +44,6 @@ export const getExchangeRates = () => (dispatch, getState) => {
         });
       })
       .catch(err => {
-        console.log(err.message);
         dispatch({
           type: REQ_SUCCEED,
           exchangeRates: []
@@ -60,3 +60,4 @@ const shouldFetch = prevState => {
     return true;
   }
 };
+
