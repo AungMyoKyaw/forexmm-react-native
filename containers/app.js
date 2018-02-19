@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import Header from '../components/header.js';
 import ErrorMessage from '../components/error.js';
 import Table from '../components/table.js';
+import Refresh from '../components/refresh.js';
 import {getExchangeRates} from '../actions';
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
         ) : (
           <Table rates={exchangeRates} />
         )}
+        <Refresh onPress={this.onClickButton.bind(this)} />
       </View>
     );
   }
