@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "Aung Myo Kyaw",
-  "githubUrl": "",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "exp start --lan",
@@ -13,7 +12,6 @@
   },
   "dependencies": {
     "expo": "^25.0.0",
-    "forexmm": "^2.1.0",
     "react": "^16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-native-flags": "^1.0.0",

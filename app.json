@@ -8,6 +8,7 @@
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
+    "githubUrl": "https://github.com/AungMyoKyaw/forexmm-react-native",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -21,7 +22,8 @@
       "loadJSInBackgroundExperimental": true
     },
     "android": {
-      "package": "com.aungmyokyaw.forexmm"
+      "package": "com.aungmyokyaw.forexmm",
+      "permissions": []
     }
   }
 }
