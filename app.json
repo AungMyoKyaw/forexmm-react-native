@@ -9,13 +9,13 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "githubUrl": "https://github.com/AungMyoKyaw/forexmm-react-native",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/app/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/app/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["assets/*"],
+    "assetBundlePatterns": ["assets/app/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.aungmyokyaw.forexmm",
