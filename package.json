@@ -6,6 +6,7 @@
   "author": "Aung Myo Kyaw",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "publish": "exp publish",
     "start": "exp start --lan",
     "build:android": "exp build:android",
     "build:ios": "exp build:ios"
@@ -13,7 +14,8 @@
   "dependencies": {
     "expo": "^25.0.0",
     "react": "^16.2.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-native":
+      "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-native-flags": "^1.0.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
