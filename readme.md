@@ -36,4 +36,4 @@ npm run build:ios
 
 ## License
 
-[MIT](./LICENSE)
+MIT © [Aung Myo Kyaw](https://github.com/AungMyoKyaw)
